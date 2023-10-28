@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <style type="text/css">
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            border: 0
+        }
+
+        .frame {
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+            margin: 0;
+            border: 0
+        }
+
+        .width0 {
+            width: 21cm;
+        }
+        .height0 {
+            height: 29.7cm;
+        }
+
+
+        @media screen  {
+                .container {
+                    bottom: 0;
+                    right: 0;
+                    overflow: auto;
+                    background-color: #9e9e9e;
+                    background-image: url("data:image/jpeg;base64,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");
+                    -webkit-transition: left 500ms;
+                    transition: left 500ms
+                }
+                .frame {
+                    margin: 13px auto;
+                    box-shadow: 1px 1px 3px 1px #333;
+                    border-collapse: separate
+                }
+        }
+
+        @media print {
+            @page {
+                margin: 0
+            }
+
+            html {
+                margin: 0
+            }
+
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact
+            }
+
+            .container {
+                    width: auto;
+                    height: auto;
+                    overflow: visible;
+                    background-color: transparent
+                }
+            .frame {
+                    margin: 0;
+                    box-shadow: none;
+                    page-break-after: always;
+                    page-break-inside: avoid
+                }
+            .width0 {
+                    width: 595.2755907pt;
+                }
+            .height0 {
+                    height: 841.8897638pt;
+                }
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="frame width0 height0"> </div>
+    </div>
+</body>
+</html>
