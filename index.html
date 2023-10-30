@@ -20,11 +20,18 @@
             border: 0
         }
 
-        .width0 {
+        .widthPortrait {
             width: 21cm;
         }
-        .height0 {
+        .heightPortrait {
             height: 29.7cm;
+        }
+
+        .widthLandscape {
+            width: 29.7cm;
+        }
+        .heightLandscape {
+            height: 21cm;
         }
 
 
@@ -71,18 +78,30 @@
                     page-break-after: always;
                     page-break-inside: avoid
                 }
-            .width0 {
+            .widthPortrait {
                     width: 595.2755907pt;
                 }
-            .height0 {
+            .heightPortrait {
                     height: 841.8897638pt;
+                }
+            .widthLandscape {
+                    width: 841.8897638pt;
+                }
+            .heightLandscape {
+                    height: 595.2755907pt;
                 }
         }
     </style>
 </head> 
 <body>
     <div class="container">
-        <div class="frame width0 height0"> </div>
+        <div class="frame widthPortrait heightPortrait">
+            <h1>Portrait</h1>
+        </div>
+        <div class="frame widthLandscape heightLandscape">
+            <h1>Landscape</h1>
+        </div>
+        
     </div>
 </body>
 </html>
